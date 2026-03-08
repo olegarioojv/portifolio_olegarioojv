@@ -5,6 +5,7 @@ import { GlobalStyle } from "./styled/global";
 import Home from "./components/Home/Home";
 import MyTechnologies from "./components/MyTechnologies/MyTechnologies";
 import Navbar from "./components/NavBar/Navbar";
+import MyProjects from "./components/MyProjects/MyProjects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Home />
       <MyTechnologies />
+      <MyProjects />
     </>
   );
 }
