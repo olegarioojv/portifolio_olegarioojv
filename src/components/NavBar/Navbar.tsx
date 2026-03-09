@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 import {
   NavContainer,
   NavLogo,
   NavMenu,
   NavItem,
-  NavLink,
   NavSocial,
   SocialIcon,
   Hamburger,
@@ -44,32 +44,32 @@ function Navbar() {
 
       <NavMenu $open={open}>
         <NavItem>
-          <NavLink href="#home" id="#home" onClick={() => setOpen(false)}>
+          <NavLink to="/" onClick={() => setOpen(false)}>
             Home
           </NavLink>
         </NavItem>
 
         <NavItem>
-          <NavLink href="#about" onClick={() => setOpen(false)}>
-            About
+          <NavLink to="/about" onClick={() => setOpen(false)}>
+            Sobre mim
           </NavLink>
         </NavItem>
 
         <NavItem>
-          <NavLink href="#technologies" onClick={() => setOpen(false)}>
-            Tech Stack
+          <NavLink to="/myTechnologies" onClick={() => setOpen(false)}>
+            Tecnologias
           </NavLink>
         </NavItem>
 
         <NavItem>
-          <NavLink href="#projects" onClick={() => setOpen(false)}>
-            Projects
+          <NavLink to="/myProjects" onClick={() => setOpen(false)}>
+            Projetos
           </NavLink>
         </NavItem>
 
         <NavItem>
-          <NavLink href="#contact" onClick={() => setOpen(false)}>
-            Contact
+          <NavLink to="/contact" onClick={() => setOpen(false)}>
+            Contatos
           </NavLink>
         </NavItem>
       </NavMenu>

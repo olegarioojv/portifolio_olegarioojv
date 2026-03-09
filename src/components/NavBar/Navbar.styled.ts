@@ -56,9 +56,21 @@ export const NavMenu = styled.ul<{ $open: boolean }>`
 
 export const NavItem = styled.li`
   font-size: 14px;
+
+  a {
+    text-decoration: none;
+    color: #a0a0a0;
+
+    &:hover {
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 `;
 
-export const NavLink = styled.a`
+export const NavLinks = styled.a`
   text-decoration: none;
   color: #a0a0a0;
   transition: 0.3s;

@@ -1,69 +1,32 @@
-import { Github, Linkedin } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import {
   Divider,
   FooterBottom,
-  FooterContact,
-  FooterContainer,
   FooterCopyright,
   FooterItem,
-  FooterLink,
   FooterMenu,
-  FooterSocial,
-  FooterText,
-  SocialIcon,
 } from "./Footer.styled";
-import { NavLogo } from "../NavBar/Navbar.styled";
 
 function Footer() {
   return (
     <>
-      <FooterContainer id="contact">
-        <NavLogo>{`{777}`} olegarioojv</NavLogo>
-
-        <FooterContact>
-          <FooterText>+55 035 99191-6370</FooterText>
-          <FooterText>olegarioo.dev@gmail.com</FooterText>
-
-          <FooterSocial>
-            <SocialIcon>
-              <a
-                href="https://github.com/olegarioojv"
-                target="_blank"
-                rel="noopener noreferrer">
-                <Github />
-              </a>
-            </SocialIcon>
-
-            <SocialIcon>
-              <a
-                href="https://www.linkedin.com/in/olegariojv/"
-                target="_blank"
-                rel="noopener noreferrer">
-                <Linkedin />
-              </a>
-            </SocialIcon>
-          </FooterSocial>
-        </FooterContact>
-      </FooterContainer>
-
       <Divider />
-
       <FooterBottom>
         <FooterMenu>
           <FooterItem>
-            <FooterLink href="#home">Home</FooterLink>
+            <NavLink to="/">Home</NavLink>
           </FooterItem>
           <FooterItem>
-            <FooterLink href="#about">About</FooterLink>
+            <NavLink to="/about">Sobre mim</NavLink>
           </FooterItem>
           <FooterItem>
-            <FooterLink href="#technologies">Technologies</FooterLink>
+            <NavLink to="/myTechnologies">Tecnologias</NavLink>
           </FooterItem>
           <FooterItem>
-            <FooterLink href="#projects">Projects</FooterLink>
+            <NavLink to="/myProjects">Projetos</NavLink>
           </FooterItem>
           <FooterItem>
-            <FooterLink href="#contact">Contact</FooterLink>
+            <NavLink to="/contact">Contatos</NavLink>
           </FooterItem>
         </FooterMenu>
 

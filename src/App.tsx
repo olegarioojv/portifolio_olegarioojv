@@ -8,15 +8,57 @@ import Navbar from "./components/NavBar/Navbar";
 import MyProjects from "./components/MyProjects/MyProjects";
 import Footer from "./components/Footer/Footer";
 
+// Router
+import { Routes, Route } from "react-router-dom";
+import About from "./pages/About/About";
+import Contact from "./components/Contact/Contact";
+
 function App() {
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      <Home />
-      <MyTechnologies />
-      <MyProjects />
-      <Footer />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <MyTechnologies />
+              <MyProjects />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/myTechnologies"
+          element={
+            <>
+              <MyTechnologies />
+            </>
+          }
+        />
+        <Route
+          path="/myProjects"
+          element={
+            <>
+              <MyProjects />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Contact />
+            </>
+          }
+        />
+
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }

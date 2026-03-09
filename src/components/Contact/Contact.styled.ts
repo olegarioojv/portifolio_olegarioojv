@@ -1,15 +1,24 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.div`
+export const ContactContainer = styled.div<{ isContactPage?: boolean }>`
   width: 100%;
-  max-width: 1200px;
+  max-width: ${({ isContactPage }) => (isContactPage ? "100%" : "1200px")};
 
   margin: 0 auto;
   padding: 30px 60px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  justify-content: ${({ isContactPage }) =>
+    isContactPage ? "center" : "space-between"};
+
+  ${({ isContactPage }) =>
+    isContactPage &&
+    `
+      min-height: 100vh;
+      flex-direction: column;
+    `}
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -19,7 +28,7 @@ export const FooterContainer = styled.div`
   }
 `;
 
-export const FooterContact = styled.div`
+export const ContactContent = styled.div`
   display: flex;
   align-items: center;
   gap: 40px;
@@ -30,12 +39,12 @@ export const FooterContact = styled.div`
   }
 `;
 
-export const FooterText = styled.p`
+export const ContactText = styled.p`
   color: #a6a6a6;
   font-size: 12px;
 `;
 
-export const FooterSocial = styled.div`
+export const ContactSocial = styled.div`
   display: flex;
   gap: 15px;
   align-items: center;
@@ -122,18 +131,6 @@ export const FooterMenu = styled.ul`
 
 export const FooterItem = styled.li`
   font-size: 14px;
-
-  a {
-    text-decoration: none;
-    color: #a0a0a0;
-
-    &:hover {
-      background: linear-gradient(90deg, #00dbde, #fc00ff);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
 `;
 
 export const FooterLink = styled.a`
