@@ -21,10 +21,6 @@ export const MyTechnologiesContent = styled.div`
     transition: transform 0.2s ease;
   }
 
-  img:hover {
-    transform: scale(1.2);
-  }
-
   /* Tablet */
   @media (max-width: 900px) {
     grid-template-columns: repeat(4, 1fr);
