@@ -26,6 +26,7 @@ export const ContactContainer = styled.div<ContactProps>`
 
   @media (max-width: 768px) {
     padding: 30px 20px;
+    gap: 15px;
 
     flex-direction: ${({ $isContactPage }) =>
       $isContactPage ? "column" : "column"};
