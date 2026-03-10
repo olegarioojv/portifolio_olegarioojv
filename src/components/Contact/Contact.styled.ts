@@ -13,21 +13,14 @@ export const ContactContainer = styled.div<ContactProps>`
 
   display: flex;
   align-items: center;
-
   justify-content: ${({ $isContactPage }) =>
     $isContactPage ? "center" : "space-between"};
 
-  ${({ $isContactPage }) =>
-    $isContactPage &&
-    `
-      min-height: 100vh;
-      flex-direction: column;
-    `}
+  min-height: ${({ $isContactPage }) => ($isContactPage ? "100dvh" : "auto")};
+  flex-direction: ${({ $isContactPage }) =>
+    $isContactPage ? "column" : "row"};
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 25px;
-    text-align: center;
     padding: 30px 20px;
   }
 `;
@@ -35,10 +28,12 @@ export const ContactContainer = styled.div<ContactProps>`
 export const ContactContent = styled.div<ContactProps>`
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: ${({ $isContactPage }) => ($isContactPage ? "20px" : "40px")};
+
+  flex-direction: ${({ $isContactPage }) =>
+    $isContactPage ? "column" : "row"};
 
   @media (max-width: 768px) {
-    flex-direction: column;
     gap: 15px;
   }
 `;
