@@ -10,6 +10,11 @@ export const HomeContainer = styled.section`
 
   padding: 0 180px;
 
+  /* telas muito grandes */
+  @media (min-width: 1600px) {
+    padding: 0 300px;
+  }
+
   /* tablet */
   @media (max-width: 1024px) {
     padding: 0 80px;
