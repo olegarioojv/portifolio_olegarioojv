@@ -2,22 +2,19 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.section`
   width: 100%;
+  max-width: 1200px;
   min-height: 70vh;
+
+  margin: 0 auto;
+  padding: 0 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 180px;
-
-  /* telas muito grandes */
-  @media (min-width: 1600px) {
-    padding: 0 300px;
-  }
-
   /* tablet */
   @media (max-width: 1024px) {
-    padding: 0 80px;
+    padding: 0 30px;
   }
 
   /* mobile */
