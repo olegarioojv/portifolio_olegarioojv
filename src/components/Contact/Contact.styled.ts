@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const ContactContainer = styled.div<{ isContactPage?: boolean }>`
+interface ContactProps {
+  $isContactPage?: boolean;
+}
+
+export const ContactContainer = styled.div<ContactProps>`
   width: 100%;
-  max-width: ${({ isContactPage }) => (isContactPage ? "100%" : "1200px")};
+  max-width: ${({ $isContactPage }) => ($isContactPage ? "100%" : "1200px")};
 
   margin: 0 auto;
   padding: 30px 60px;
@@ -10,11 +14,11 @@ export const ContactContainer = styled.div<{ isContactPage?: boolean }>`
   display: flex;
   align-items: center;
 
-  justify-content: ${({ isContactPage }) =>
-    isContactPage ? "center" : "space-between"};
+  justify-content: ${({ $isContactPage }) =>
+    $isContactPage ? "center" : "space-between"};
 
-  ${({ isContactPage }) =>
-    isContactPage &&
+  ${({ $isContactPage }) =>
+    $isContactPage &&
     `
       min-height: 100vh;
       flex-direction: column;
@@ -28,7 +32,7 @@ export const ContactContainer = styled.div<{ isContactPage?: boolean }>`
   }
 `;
 
-export const ContactContent = styled.div`
+export const ContactContent = styled.div<ContactProps>`
   display: flex;
   align-items: center;
   gap: 40px;
@@ -39,9 +43,10 @@ export const ContactContent = styled.div`
   }
 `;
 
-export const ContactText = styled.p`
+export const ContactText = styled.p<ContactProps>`
   color: #a6a6a6;
-  font-size: 12px;
+  font-size: ${({ $isContactPage }) =>
+    $isContactPage ? "clamp(28px, 4vw, 40px)" : "12px"};
 `;
 
 export const ContactSocial = styled.div`

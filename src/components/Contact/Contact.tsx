@@ -15,12 +15,17 @@ const Contact = () => {
   const isContactPage = location.pathname === "/contact";
 
   return (
-    <ContactContainer isContactPage={isContactPage}>
-      {location.pathname !== "/contact" && <NavLogo>@olegarioojv</NavLogo>}
+    <ContactContainer $isContactPage={isContactPage}>
+      {!isContactPage && <NavLogo>@olegarioojv</NavLogo>}
 
-      <ContactContent>
-        <ContactText>+55 035 99191-6370</ContactText>
-        <ContactText>olegarioo.dev@gmail.com</ContactText>
+      <ContactContent $isContactPage={isContactPage}>
+        <ContactText $isContactPage={isContactPage}>
+          +55 035 99191-6370
+        </ContactText>
+
+        <ContactText $isContactPage={isContactPage}>
+          olegarioo.dev@gmail.com
+        </ContactText>
 
         <ContactSocial>
           <SocialIcon>
