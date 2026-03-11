@@ -69,7 +69,7 @@ function About() {
   return (
     <>
       <AboutContainer>
-        <AboutTitle>Sobre Min</AboutTitle>
+        <AboutTitle>Sobre Mim</AboutTitle>
         <AboutText>
           Olá! Sou João Victor, tenho 22 anos e sou natural de Caxambu (MG).
           Atualmente curso Análise e Desenvolvimento de Sistemas e estou me
